@@ -61,8 +61,8 @@ namespace Uppgift1b
 
             //8. Använd explicit konvertering för att tilldela variabeln "d" värdet av variabeln "f"
             //Kod här
-            
-        
+
+
             d = Convert.ToDecimal(f);
 
 
@@ -153,8 +153,8 @@ namespace Uppgift1b
             //Produkten av talen 2 och 10 är: 20
             //Kod här
 
-          string s = ($"produkten av {tal1} och {tal2} är {tal1 * tal2} ");
-            Console.WriteLine(s);
+          Console.WriteLine ($"produkten av {tal1} och {tal2} är {tal1 * tal2} ");
+            
             
 
 
