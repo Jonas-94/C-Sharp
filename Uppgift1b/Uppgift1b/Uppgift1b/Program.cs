@@ -95,7 +95,7 @@ namespace Uppgift1b
             //14. Använd en hjälp klass för att konvertera 
             //och tilldela variabeln "b" värdet av variabeln "sant"
             //Kod här
-            sant = "true";
+            
             b = bool.Parse(sant);
 
 
@@ -154,10 +154,10 @@ namespace Uppgift1b
             //Kod här
 
           Console.WriteLine ($"produkten av {tal1} och {tal2} är {tal1 * tal2} ");
-            
-            
 
 
-        } 
+
+
+        }
     }
 }
