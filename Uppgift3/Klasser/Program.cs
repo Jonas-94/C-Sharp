@@ -75,6 +75,9 @@ namespace Klasser
 
             Getinfoaboutcar();
 
+            Console.ReadKey();
+            Console.Clear();
+
             List<Person> personlista = new List<Person>();
 
             Person person;
