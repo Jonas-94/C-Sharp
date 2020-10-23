@@ -7,92 +7,77 @@ using Klasser;
 
 namespace ArvOchAbstraktion
 {
-    class Verkstad : IVerkstad
+    public class Verkstad: IVerkstad
     {
-        public List<Fordon> fordoniverkstad { get; set; } = new List<Fordon>();
-        public List<Bil> bilar { get; set; } = new List<Bil>();
-        public List<Lastbil> lastbilar { get; set; } = new List<Lastbil>();
-        public List<Motorcykel> motorcyklar { get; set; } = new List<Motorcykel>();
-        public List<Buss> bussar { get; set; } = new List<Buss>();
+        
+        List<Fordon> fordonslista = new List<Fordon>();
 
-
-
-
-        public void VisaFordon()
+        public void Läggtill()
         {
-
-
-            for (int i = 0; i < fordoniverkstad.Count; i++)
+            Console.WriteLine("Vilken fordon vill du lägga till?  [1]Bil [2]Lastbil [3]Buss [4]Motorcykel");
+            int svar = Convert.ToInt32(Console.ReadLine());
+            switch (svar)
             {
+                case 1:
+                    Fordon bil = new Fordon();
+                    Console.WriteLine("Modellnamn?: ");
+                    bil._Modellnamn = Console.ReadLine();
+                    Console.WriteLine("Registreringsnummer?: ");
+                    bil._Regnummer = Console.ReadLine();
+                    Console.WriteLine("Hur många mill har bilen åkt?: ");
+                    bil._Milmätare = Convert.ToDouble(Console.ReadLine());
+                    bil._Registrering = DateTime.Now;
+                    Addfordon(bil);
+                    break;
+                case 2:
+                    Fordon lastbil = new Fordon();
+                    Console.WriteLine("Modellnamn?: ");
+                    lastbil._Modellnamn = Console.ReadLine();
+                    Console.WriteLine("Registreringsnummer?: ");
+                    lastbil._Regnummer = Console.ReadLine();
+                    Console.WriteLine("Hur många mill har bilen åkt?: ");
+                    lastbil._Milmätare = Convert.ToDouble(Console.ReadLine());
+                    lastbil._Registrering = DateTime.Now;
+                    Addfordon(lastbil);
+                    break;
+                case 3:
+                    Fordon buss = new Fordon();
+                    Console.WriteLine("Modellnamn?: ");
+                    buss._Modellnamn = Console.ReadLine();
+                    Console.WriteLine("Registreringsnummer?: ");
+                    buss._Regnummer = Console.ReadLine();
+                    Console.WriteLine("Hur många mill har bilen åkt?: ");
+                    buss._Milmätare = Convert.ToDouble(Console.ReadLine());
+                    buss._Registrering = DateTime.Now;
+                    Addfordon(buss);
+                    break;
+                case 4:
+                    Fordon motorcykel = new Fordon();
+                    Console.WriteLine("Modellnamn?: ");
+                    motorcykel._Modellnamn = Console.ReadLine();
+                    Console.WriteLine("Registreringsnummer?: ");
+                    motorcykel._Regnummer = Console.ReadLine();
+                    Console.WriteLine("Hur många mill har bilen åkt?: ");
+                    motorcykel._Milmätare = Convert.ToDouble(Console.ReadLine());
+                    motorcykel._Registrering = DateTime.Now;
+                    Addfordon(motorcykel);
+                    break;
 
-
-                if (fordoniverkstad[i].GetType().Name == "Bil")
-                {
-                    Console.WriteLine($"Plats {i + 1}\n-----BILAR-----");
-                    for (int p = 0; p < bilar.Count; p++)
-                    {
-                        if (bilar[p]._Regnummer == fordoniverkstad[i]._Regnummer)
-                        {
-                            Console.WriteLine($" Har dragkrok: {(bilar[p]._Dragkrok ? "Ja" : "Nej")}");
-
-                        }
-
-                    }
-                }
-                else if (fordoniverkstad[i].GetType().Name == "Motorcykel")
-                {
-                    Console.WriteLine($"Plats { i + 1}\n-----Motorcykel-----");
-                    for (int p = 0; p < motorcyklar.Count; p++)
-                    {
-                        if (motorcyklar[p]._Regnummer == fordoniverkstad[i]._Regnummer)
-                        {
-                            Console.WriteLine($" Maxhastighet: {motorcyklar[p]._Maxfart}");
-
-                        }
-
-                    }
-                }
-                else if (fordoniverkstad[i].GetType().Name == "Buss")
-                {
-                    Console.WriteLine($"Plats { i + 1}\n-----Buss-----");
-                    for (int p = 0; p < bussar.Count; p++)
-                    {
-                        if (bussar[p]._Regnummer == fordoniverkstad[i]._Regnummer)
-                        {
-                            Console.WriteLine($" Max antal passagerare: {bussar[p]._Maxantalpassagerare}");
-                        }
-
-                    }
-                }
-                else if (fordoniverkstad[i].GetType().Name == "Lastbil")
-                {
-                    Console.WriteLine($"Plats { i + 1}\n-----Lastbil-----");
-                    for (int p = 0; p < lastbilar.Count; p++)
-                    {
-                        if (lastbilar[p]._Regnummer == fordoniverkstad[i]._Regnummer)
-                        {
-                            Console.WriteLine($" Maxlast: {lastbilar[p]._Maxlastikg}");
-                        }
-
-                    }
-                }
-                Console.WriteLine($"Modell:{fordoniverkstad[i]._Modellnamn} " +
-                    $"\n Regnummer: {fordoniverkstad[i]._Regnummer}" +
-                    $"\n Datum: {fordoniverkstad[i]._Registrering}");
             }
 
         }
-
-
         public void Addfordon(Fordon fordon)
         {
-
-            fordoniverkstad.Add(fordon);
+            fordonslista.Add(fordon);
+            
         }
+
         public void Deletefordon(Fordon fordon)
         {
-            fordoniverkstad.Remove(fordon);
+            fordonslista.Remove(fordon);
         }
+
+
     }
 }
 

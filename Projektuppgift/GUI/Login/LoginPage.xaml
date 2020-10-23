@@ -29,7 +29,7 @@
         <TextBox x:Name="tbUsernam" Grid.Row="1" Grid.Column="1"></TextBox>
         
         <Border Grid.Column="0" Grid.Row="2" Height="35" Padding="5" Background="#4E87D4">
-            <Label VerticalAlignment="Center" Foreground="White">Lösenord:</Label>
+            <Label VerticalAlignment="Center" Foreground="White" RenderTransformOrigin="0.497,0.528">Lösenord:</Label>
         </Border>
         <PasswordBox x:Name="pbPassword" Grid.Row="2" Grid.Column="1"></PasswordBox>
 

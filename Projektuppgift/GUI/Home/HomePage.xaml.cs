@@ -16,11 +16,12 @@ namespace GUI.Home
     /// <summary>
     /// Interaction logic for HomePage.xaml
     /// </summary>
-    public partial class HomePage : Page
+    public partial class HomePage : Page 
     {
         public HomePage()
         {
             InitializeComponent();
+            Button.
         }
     }
 }

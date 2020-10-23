@@ -18,5 +18,7 @@
 
 
         <Label Grid.Row="0" Grid.Column="0">Hem</Label>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="24,32,0,32" RenderTransformOrigin="-1.307,0.443"/>
+        <TextBlock HorizontalAlignment="Left" Margin="224,26,0,0" Text="TextBlock" TextWrapping="Wrap" VerticalAlignment="Top"/>
     </Grid>
 </Page>
