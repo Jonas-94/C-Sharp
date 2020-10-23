@@ -13,8 +13,11 @@ namespace Logic.Entities
         public string Registreringsdatum { get; set; }
         public string Drivmedel { get; set; }
 
-       
 
+        public virtual void Registrerafordon()
+        {
+
+        }
 
      }
 }
